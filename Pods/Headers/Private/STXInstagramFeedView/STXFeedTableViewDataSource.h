@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/STXFeedTableViewDataSource.h
+../../../STXInstagramFeedView/Pod/Classes/UITableViewSources/STXFeedTableViewDataSource.h

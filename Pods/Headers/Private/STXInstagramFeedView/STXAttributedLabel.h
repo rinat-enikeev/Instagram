@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/STXAttributedLabel.h
+../../../STXInstagramFeedView/Pod/Classes/Labels/STXAttributedLabel.h

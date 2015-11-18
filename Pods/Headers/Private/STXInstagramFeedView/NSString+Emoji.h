@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/NSString+Emoji.h
+../../../STXInstagramFeedView/Pod/Classes/Categories/NSString+Emoji.h

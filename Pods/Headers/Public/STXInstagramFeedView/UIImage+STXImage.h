@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/UIImage+STXImage.h
+../../../STXInstagramFeedView/Pod/Classes/Categories/UIImage+STXImage.h

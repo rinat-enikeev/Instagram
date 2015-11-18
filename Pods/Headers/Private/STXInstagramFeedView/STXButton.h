@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/STXButton.h
+../../../STXInstagramFeedView/Pod/Classes/Buttons/STXButton.h

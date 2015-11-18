@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/STXFeedPhotoCell.h
+../../../STXInstagramFeedView/Pod/Classes/Cells/STXFeedPhotoCell.h

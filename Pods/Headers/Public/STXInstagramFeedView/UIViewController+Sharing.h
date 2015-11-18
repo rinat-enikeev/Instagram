@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/UIViewController+Sharing.h
+../../../STXInstagramFeedView/Pod/Classes/Categories/UIViewController+Sharing.h

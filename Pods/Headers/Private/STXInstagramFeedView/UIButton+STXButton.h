@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/UIButton+STXButton.h
+../../../STXInstagramFeedView/Pod/Classes/Categories/UIButton+STXButton.h

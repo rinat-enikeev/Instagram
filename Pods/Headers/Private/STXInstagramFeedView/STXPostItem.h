@@ -1,1 +1,0 @@
-../../../STXInstagramFeedView/Pod/Classes/STXPostItem.h

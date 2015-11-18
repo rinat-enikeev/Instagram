@@ -1,1 +1,1 @@
-../../../STXInstagramFeedView/Pod/Classes/UIImageView+Circling.h
+../../../STXInstagramFeedView/Pod/Classes/Categories/UIImageView+Circling.h
