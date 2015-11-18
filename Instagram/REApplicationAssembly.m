@@ -8,6 +8,7 @@
 
 #import "REApplicationAssembly.h"
 #import <InstaKit/InstaKit.h>
+#import "REInstaPopularFeedViewController.h"
 
 @implementation REApplicationAssembly
 
@@ -29,6 +30,15 @@
              }];
             definition.scope = TyphoonScopeSingleton;
         }];
+}
+
+#pragma mark - ViewControllers
+- (REInstaPopularFeedViewController *)rootViewController
+{
+    return [TyphoonDefinition withClass:[REInstaPopularFeedViewController class] configuration:^(TyphoonDefinition *definition)
+            {
+                [definition injectProperty:@selector(instaKit) with:[self instaKit]];
+            }];
 }
 
 @end
