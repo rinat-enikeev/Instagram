@@ -93,15 +93,10 @@
 		0E6872671BFD06F8004C77F2 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				0E68728D1BFD0A51004C77F2 /* Assembly */,
 				0E68726B1BFD06F8004C77F2 /* AppDelegate.h */,
 				0E68726C1BFD06F8004C77F2 /* AppDelegate.m */,
-				0E68726E1BFD06F8004C77F2 /* REInstaPopularFeedViewController.h */,
-				0E68726F1BFD06F8004C77F2 /* REInstaPopularFeedViewController.m */,
-				0E6872711BFD06F8004C77F2 /* Main.storyboard */,
-				0E6872741BFD06F8004C77F2 /* Assets.xcassets */,
-				0E6872761BFD06F8004C77F2 /* LaunchScreen.storyboard */,
-				0E6872791BFD06F8004C77F2 /* Info.plist */,
+				0E68728D1BFD0A51004C77F2 /* Assembly */,
+				0E6872941BFD0C44004C77F2 /* Scenes */,
 				0E6872681BFD06F8004C77F2 /* Supporting Files */,
 			);
 			path = Instagram;
@@ -110,6 +105,9 @@
 		0E6872681BFD06F8004C77F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E6872741BFD06F8004C77F2 /* Assets.xcassets */,
+				0E6872791BFD06F8004C77F2 /* Info.plist */,
+				0E6872761BFD06F8004C77F2 /* LaunchScreen.storyboard */,
 				0E6872691BFD06F8004C77F2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -132,6 +130,24 @@
 				0E6872911BFD0B27004C77F2 /* REApplicationAssembly.m */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		0E6872941BFD0C44004C77F2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0E6872711BFD06F8004C77F2 /* Main.storyboard */,
+				0E6872951BFD0C50004C77F2 /* PopularFeed */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		0E6872951BFD0C50004C77F2 /* PopularFeed */ = {
+			isa = PBXGroup;
+			children = (
+				0E68726E1BFD06F8004C77F2 /* REInstaPopularFeedViewController.h */,
+				0E68726F1BFD06F8004C77F2 /* REInstaPopularFeedViewController.m */,
+			);
+			name = PopularFeed;
 			sourceTree = "<group>";
 		};
 		15EF21E036C124674863E2CF /* Pods */ = {
