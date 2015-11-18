@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>InstagramClientID</key>
+	<string>24fc1af302d3442c86e5e3c1e8708015</string>
+	<key>InstagramDbFileName</key>
+	<string>InstagramSharedSQLiteDB</string>
+</dict>
+</plist>
