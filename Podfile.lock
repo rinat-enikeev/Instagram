@@ -37,12 +37,16 @@ PODS:
     - UALogger
   - TransitionKit (2.2.1)
   - TTTAttributedLabel (1.13.4)
+  - Typhoon (3.4.3):
+    - Typhoon/no-arc (= 3.4.3)
+  - Typhoon/no-arc (3.4.3)
   - UALogger (0.3)
 
 DEPENDENCIES:
   - InstaKit
   - InstaModel
   - STXInstagramFeedView
+  - Typhoon
 
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
@@ -57,6 +61,7 @@ SPEC CHECKSUMS:
   STXInstagramFeedView: 771c47d2464320f0faae177ae6e09658dc0a51d7
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  Typhoon: 382b918b31d5d19a82922448af65f01f08102dc6
   UALogger: ccc041e5982dbd274ab5805f914076fef9bf29cf
 
 COCOAPODS: 0.39.0

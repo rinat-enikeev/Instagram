@@ -9,6 +9,7 @@ platform :ios, '8.0'
 pod 'InstaKit'
 pod 'InstaModel'
 pod 'STXInstagramFeedView'
+pod 'Typhoon'
 xcodeproj 'Instagram'
 end
 
