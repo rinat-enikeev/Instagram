@@ -6,13 +6,13 @@
 //  Copyright © 2015 Rinat Enikeev. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "REInstaPopularFeedViewController.h"
 
-@interface ViewController ()
+@interface REInstaPopularFeedViewController ()
 
 @end
 
-@implementation ViewController
+@implementation REInstaPopularFeedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
