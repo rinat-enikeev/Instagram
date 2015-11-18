@@ -1,0 +1,8 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+#import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
+#import <InstaModel/InstaModel.h>
+#import "REInstaModel.h"

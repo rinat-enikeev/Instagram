@@ -1,0 +1,1 @@
+../../../STXInstagramFeedView/Pod/Classes/UIViewController+Indicator.h

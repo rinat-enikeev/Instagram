@@ -1,0 +1,1 @@
+../../../InstaKit/Pod/Classes/Model/REInstaTag+CoreDataProperties.h

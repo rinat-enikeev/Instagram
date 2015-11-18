@@ -1,0 +1,1 @@
+../../../InstaKit/Pod/Classes/Model/REInstaPost+CoreDataProperties.h

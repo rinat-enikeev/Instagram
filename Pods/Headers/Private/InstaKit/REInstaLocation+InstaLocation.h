@@ -1,0 +1,1 @@
+../../../InstaKit/Pod/Classes/Adapters/REInstaLocation+InstaLocation.h

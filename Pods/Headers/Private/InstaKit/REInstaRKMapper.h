@@ -1,0 +1,1 @@
+../../../InstaKit/Pod/Classes/Mappings/REInstaRKMapper.h

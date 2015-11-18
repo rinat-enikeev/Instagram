@@ -1,0 +1,1 @@
+../../../InstaModel/Pod/Classes/InstaModel.h

@@ -1,0 +1,1 @@
+../../../InstaKit/Pod/Classes/Model/REInstaImage+CoreDataProperties.h

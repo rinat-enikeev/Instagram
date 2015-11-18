@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1504" minimumToolsVersion="Xcode 7.0">
+    <entity name="REInstaAttribution" representedClassName="REInstaAttribution" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="attribution" inverseEntity="REInstaPost" syncable="YES"/>
+    </entity>
+    <entity name="REInstaCaption" representedClassName="REInstaCaption" syncable="YES">
+        <attribute name="createdTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="captions" inverseEntity="REInstaUser" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="caption" inverseEntity="REInstaPost" syncable="YES"/>
+    </entity>
+    <entity name="REInstaComment" representedClassName="REInstaComment" syncable="YES">
+        <attribute name="createdTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="comments" inverseEntity="REInstaUser" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="comments" inverseEntity="REInstaPost" syncable="YES"/>
+    </entity>
+    <entity name="REInstaImage" representedClassName="REInstaImage" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="localPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="postLow" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="imageLow" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="postStd" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="imageStd" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="postThumb" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="imageThumb" inverseEntity="REInstaPost" syncable="YES"/>
+    </entity>
+    <entity name="REInstaLocation" representedClassName="REInstaLocation" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="location" inverseEntity="REInstaPost" syncable="YES"/>
+    </entity>
+    <entity name="REInstaPost" representedClassName="REInstaPost" syncable="YES">
+        <attribute name="commentsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="distance" optional="YES" transient="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="filter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userHasLiked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="attribution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaAttribution" inverseName="posts" inverseEntity="REInstaAttribution" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="posts" inverseEntity="REInstaUser" syncable="YES"/>
+        <relationship name="caption" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaCaption" inverseName="post" inverseEntity="REInstaCaption" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaComment" inverseName="post" inverseEntity="REInstaComment" syncable="YES"/>
+        <relationship name="imageLow" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaImage" inverseName="postLow" inverseEntity="REInstaImage" syncable="YES"/>
+        <relationship name="imageStd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaImage" inverseName="postStd" inverseEntity="REInstaImage" syncable="YES"/>
+        <relationship name="imageThumb" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaImage" inverseName="postThumb" inverseEntity="REInstaImage" syncable="YES"/>
+        <relationship name="likers" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaUser" inverseName="likes" inverseEntity="REInstaUser" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaLocation" inverseName="post" inverseEntity="REInstaLocation" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaTag" inverseName="posts" inverseEntity="REInstaTag" syncable="YES"/>
+        <relationship name="usersOnPost" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaUserOnPost" inverseName="post" inverseEntity="REInstaUserOnPost" syncable="YES"/>
+        <relationship name="videoLowBand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaVideo" inverseName="postLowBand" inverseEntity="REInstaVideo" syncable="YES"/>
+        <relationship name="videoLowRes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaVideo" inverseName="postLowRes" inverseEntity="REInstaVideo" syncable="YES"/>
+        <relationship name="videoStdRes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaVideo" inverseName="postStdRes" inverseEntity="REInstaVideo" syncable="YES"/>
+    </entity>
+    <entity name="REInstaRelationship" representedClassName="REInstaRelationship" syncable="YES">
+        <attribute name="incomingStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="outgoingStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="relationships" inverseEntity="REInstaUser" syncable="YES"/>
+        <relationship name="requestedUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="relationshipRequests" inverseEntity="REInstaUser" syncable="YES"/>
+    </entity>
+    <entity name="REInstaTag" representedClassName="REInstaTag" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="tags" inverseEntity="REInstaPost" syncable="YES"/>
+    </entity>
+    <entity name="REInstaUser" representedClassName="REInstaUser" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="followedByCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="followsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mediaCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="profilePictureLocalPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profilePictureUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="captions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaCaption" inverseName="from" inverseEntity="REInstaCaption" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaComment" inverseName="from" inverseEntity="REInstaComment" syncable="YES"/>
+        <relationship name="likes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="likers" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="onPostPhotos" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaUserOnPost" inverseName="user" inverseEntity="REInstaUserOnPost" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="author" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="relationshipRequests" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaRelationship" inverseName="requestedUser" inverseEntity="REInstaRelationship" syncable="YES"/>
+        <relationship name="relationships" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaRelationship" inverseName="owner" inverseEntity="REInstaRelationship" syncable="YES"/>
+    </entity>
+    <entity name="REInstaUserOnPost" representedClassName="REInstaUserOnPost" syncable="YES">
+        <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="usersOnPost" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="onPostPhotos" inverseEntity="REInstaUser" syncable="YES"/>
+    </entity>
+    <entity name="REInstaVideo" representedClassName="REInstaVideo" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="localPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="postLowBand" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="videoLowBand" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="postLowRes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="videoLowRes" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="postStdRes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="REInstaPost" inverseName="videoStdRes" inverseEntity="REInstaPost" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="REInstaAttribution" positionX="0" positionY="135" width="128" height="75"/>
+        <element name="REInstaCaption" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="REInstaComment" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="REInstaImage" positionX="18" positionY="63" width="128" height="150"/>
+        <element name="REInstaLocation" positionX="36" positionY="108" width="128" height="120"/>
+        <element name="REInstaPost" positionX="-63" positionY="-18" width="128" height="390"/>
+        <element name="REInstaRelationship" positionX="-9" positionY="135" width="128" height="105"/>
+        <element name="REInstaTag" positionX="-9" positionY="63" width="128" height="75"/>
+        <element name="REInstaUser" positionX="-18" positionY="27" width="128" height="330"/>
+        <element name="REInstaUserOnPost" positionX="0" positionY="144" width="128" height="105"/>
+        <element name="REInstaVideo" positionX="-9" positionY="99" width="128" height="150"/>
+    </elements>
+</model>
