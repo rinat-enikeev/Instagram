@@ -10,6 +10,5 @@
 
 @interface REInstaPopularFeedViewController : UITableViewController
 
-
 @end
 
