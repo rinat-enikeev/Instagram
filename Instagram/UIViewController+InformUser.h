@@ -6,6 +6,7 @@
 //  Copyright © 2015 Rinat Enikeev. All rights reserved.
 //
 
+@import UIKit;
 #import "UIViewController+InformUser.h"
 
 @interface UIViewController(InformUser)
