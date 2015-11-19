@@ -20,6 +20,7 @@
 
 // services
 @property (strong, nonatomic) InstaKit* instaKit;
+@property (strong, nonatomic) Reachability* internetReachability;
 
 // instagram-like feed support
 @property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
@@ -51,6 +52,32 @@
     // 3. Refresh Control
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(renewFeed) forControlEvents:UIControlEventValueChanged];
+    
+    // 4. Internet reachability. Used to download images for visible cells
+    //     right after internet connection became alive.
+    self.internetReachability = [Reachability reachabilityForInternetConnection];
+    
+    __weak REInstaPopularFeedViewController* weakSelf = self;
+    _internetReachability.unreachableBlock = ^(Reachability*reach)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf informUserThatInternetIsOffline];
+        });
+    };
+    
+    _internetReachability.reachableBlock = ^(Reachability*reach)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            for (UITableViewCell* cell in weakSelf.tableView.visibleCells) {
+                if ([cell isKindOfClass:[STXFeedPhotoCell class]]) {
+                    // download images for visible cells if they are not yet downloaded
+                    [weakSelf feedCellWillBeDisplayed:(STXFeedPhotoCell*)cell];
+                }
+            }
+        });
+    };
+    
+    [_internetReachability startNotifier];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -70,6 +97,10 @@
     }
     
     [self becomeUserInformSourceViewController];
+    
+    if (![_internetReachability isReachable]) {
+        [self informUserThatInternetIsOffline];
+    }
 }
 
 - (void)dealloc
@@ -84,11 +115,9 @@
  */
 -(void)updateFeed {
     
-    if ([[Reachability reachabilityForInternetConnection] isReachable]) {
+    if ([_internetReachability isReachable]) {
         [self renewFeed];
     } else {
-        [self informUserWithWarnMessage:NSLocalizedString(@"Internet connection unavaliable. ", @"Internet connection unavaliable. ") withTitle:nil];
-        
         [self fetchFeed:self.fetchedPostsLimit.integerValue];
     }
 }
@@ -145,7 +174,7 @@
     NSObject<InstaImage>* imgStd = cell.postItem.imageStd;
     if (imgStd.localPath == nil) {
         
-        if ([[Reachability reachabilityForInternetConnection] isReachable]) {
+        if ([_internetReachability isReachable]) {
             [[_instaKit blobService] renewImageBlobFor:imgStd withProgress:nil success:^(NSObject<InstaImage> *image) {
                 [self updateStdImageInPost:cell];
             } failure:^(NSError *error) {
@@ -160,7 +189,7 @@
     
     NSObject<InstaUser>* author = cell.postItem.author;
     if (author.profilePictureLocalPath == nil) {
-        if ([[Reachability reachabilityForInternetConnection] isReachable]) {
+        if ([_internetReachability isReachable]) {
             [[_instaKit blobService] renewProfileImageBlobFor:author withProgress:nil success:^(NSObject<InstaUser> *user) {
                 [self updateProfilePictureIn:cell];
             } failure:^(NSError *error) {
@@ -208,6 +237,10 @@
     NSString *documentsPath = [paths objectAtIndex:0];
     
     return [documentsPath stringByAppendingPathComponent:name];
+}
+
+-(void)informUserThatInternetIsOffline {
+    [self informUserWithWarnMessage:NSLocalizedString(@"The Internet connection appears to be offline.", @"The Internet connection appears to be offline.") withTitle:nil];
 }
 
 @end
