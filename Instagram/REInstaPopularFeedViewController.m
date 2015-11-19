@@ -10,14 +10,24 @@
 #import <InstaKit/InstaKit.h>
 #import <STXInstagramFeedView/STXDynamicTableView.h>
 #import <InstaModel/InstaModel.h>
+#import <Reachability/Reachability.h>
+#import "UIViewController+InformUser.h"
 
 @interface REInstaPopularFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
 
-@property(nonatomic, strong) InstaKit* instaKit;
-
+// views
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
+
+// services
+@property (strong, nonatomic) InstaKit* instaKit;
+
+// instagram-like feed support
 @property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
 @property (strong, nonatomic) STXFeedTableViewDelegate *tableViewDelegate;
+
+// configuration
+@property (strong, nonatomic) NSNumber* fetchedPostsLimit;
+
 
 @end
 
@@ -41,16 +51,22 @@
     // 3. Refresh Control
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(renewFeed) forControlEvents:UIControlEventValueChanged];
-    
-    // 4. Renew feed
-    [self renewFeed];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    // fetch posts if not presented.
+    // if there are no posts in db, renew from Instagram.
     if ([self.tableViewDataSource.posts count] == 0) {
         [self.activityIndicatorView startAnimating];
+        NSUInteger fetchedPostsCount = [self fetchFeed:[_fetchedPostsLimit integerValue]];
+        
+        if (fetchedPostsCount < 1) {
+            [self.activityIndicatorView startAnimating];
+            [self updateFeed];
+        }
     }
 }
 
@@ -62,11 +78,51 @@
 }
 
 /**
- *  @brief  Reloads posts from Instagram api.
+ *  @brief  Updates feed based on internet reachability and inform user appropriately.
+ */
+-(void)updateFeed {
+    
+    if ([[Reachability reachabilityForInternetConnection] isReachable]) {
+        [self renewFeed];
+    } else {
+        [self informUserWithWarnMessage:NSLocalizedString(@"Internet connection unavaliable. ", @"Internet connection unavaliable. ") withTitle:NSLocalizedString(@"Warning", @"Warning")];
+        
+        [self fetchFeed:self.fetchedPostsLimit.integerValue];
+    }
+}
+
+/**
+ *  @brief  Fetches posts from persistence.
+ *
+ *  @param limit maximum number of posts to fetch.
+ *
+ *  @return number of posts fetched.
+ */
+-(NSUInteger)fetchFeed:(NSUInteger)limit {
+    
+    NSArray<NSSortDescriptor *>* sds = @[[[NSSortDescriptor alloc] initWithKey:@"likesCount" ascending:false]];
+    
+    NSError* error = nil;
+    NSArray* posts = [[_instaKit postService] fetchPostsWithPredicate:nil sortDescriptors:sds limit:limit error:&error];
+    
+    if (error != nil) {
+        [self informUserWithErrorMessage:error.localizedDescription withTitle:NSLocalizedString(@"Error", @"Error")];
+    } else {
+        self.tableViewDataSource.posts = [posts copy];
+        [self.tableView reloadData];
+    }
+    
+    [self.activityIndicatorView stopAnimating];
+    [self.refreshControl endRefreshing];
+    
+    return [posts count];
+}
+
+/**
+ *  @brief  Downloads last popular posts from Instagram.
  */
 - (void)renewFeed
 {
-    
     [[_instaKit postService] renewMediaPopularWithProgress:nil success:^(NSArray *objects) {
         self.tableViewDataSource.posts = [objects copy];
         [self.tableView reloadData];
@@ -77,9 +133,8 @@
         [self.refreshControl endRefreshing];
         NSLog(@"%@", error);
     }];
-    
-    
 }
+
 
 #pragma mark - STXFeedPhotoCellDelegate
 - (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
@@ -134,28 +189,6 @@
             [cell.profileImageView setCircledImageFrom:authorImage placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
         });
     });
-}
-
-#pragma mark - STXUserActionDelegate
-
-- (void)userDidLike:(STXUserActionCell *)userActionCell
-{
-    
-}
-
-- (void)userDidUnlike:(STXUserActionCell *)userActionCell
-{
-    
-}
-
-- (void)userWillComment:(STXUserActionCell *)userActionCell
-{
-    
-}
-
-- (void)userWillShare:(STXUserActionCell *)userActionCell
-{
-    
 }
 
 @end
