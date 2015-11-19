@@ -139,26 +139,34 @@
 #pragma mark - STXFeedPhotoCellDelegate
 - (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
 {
-    // 1. Load standart post image for cell
+    
     NSObject<InstaImage>* imgStd = cell.postItem.imageStd;
     if (imgStd.localPath == nil) {
-        [[_instaKit blobService] renewImageBlobFor:imgStd withProgress:nil success:^(NSObject<InstaImage> *image) {
-            [self updateStdImageInPost:cell];
-        } failure:^(NSError *error) {
-            NSLog(@"%@", error.localizedDescription);
-        }];
+        
+        if ([[Reachability reachabilityForInternetConnection] isReachable]) {
+            [[_instaKit blobService] renewImageBlobFor:imgStd withProgress:nil success:^(NSObject<InstaImage> *image) {
+                [self updateStdImageInPost:cell];
+            } failure:^(NSError *error) {
+                NSLog(@"%@", error.localizedDescription);
+            }];
+        } else {
+            cell.postImageView.image = [UIImage imageNamed:@"InstagramPhotoPostPlaceholderImage"];
+        }
     } else {
         [self updateStdImageInPost:cell];
     }
     
-    // 2. Load profile picture for photo cell
     NSObject<InstaUser>* author = cell.postItem.author;
     if (author.profilePictureLocalPath == nil) {
-        [[_instaKit blobService] renewProfileImageBlobFor:author withProgress:nil success:^(NSObject<InstaUser> *user) {
-            [self updateProfilePictureIn:cell];
-        } failure:^(NSError *error) {
-            NSLog(@"%@", error.localizedDescription);
-        }];
+        if ([[Reachability reachabilityForInternetConnection] isReachable]) {
+            [[_instaKit blobService] renewProfileImageBlobFor:author withProgress:nil success:^(NSObject<InstaUser> *user) {
+                [self updateProfilePictureIn:cell];
+            } failure:^(NSError *error) {
+                NSLog(@"%@", error.localizedDescription);
+            }];
+        } else {
+            [cell.profileImageView setCircledImageFrom:[UIImage imageNamed:@"InstagramPhotoPostPlaceholderImage"] placeholderImage:[UIImage imageNamed:@"InstagramPhotoPostPlaceholderImage"] borderWidth:2];
+        }
         
     } else {
         [self updateProfilePictureIn:cell];
@@ -171,7 +179,7 @@
 -(void)updateStdImageInPost:(STXFeedPhotoCell *)cell {
     NSObject<InstaImage>* imgStd = cell.postItem.imageStd;
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage* postStdImage = [UIImage imageWithContentsOfFile:imgStd.localPath];
+        UIImage* postStdImage = [UIImage imageWithContentsOfFile:[self documentsPathForFileName:imgStd.localPath]];
         dispatch_async(dispatch_get_main_queue(), ^(void){
             cell.postImageView.image = postStdImage;
         });
@@ -184,11 +192,21 @@
 -(void)updateProfilePictureIn:(STXFeedPhotoCell *)cell {
     NSObject<InstaUser>* author = cell.postItem.author;
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage* authorImage = [UIImage imageWithContentsOfFile:author.profilePictureLocalPath];
+        UIImage* authorImage = [UIImage imageWithContentsOfFile:[self documentsPathForFileName:author.profilePictureLocalPath]];
         dispatch_async(dispatch_get_main_queue(), ^(void){
-            [cell.profileImageView setCircledImageFrom:authorImage placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
+            [cell.profileImageView setCircledImageFrom:authorImage placeholderImage:[UIImage imageNamed:@"InstagramPhotoPostPlaceholderImage"] borderWidth:2];
         });
     });
 }
+
+#pragma mark - private Helpers
+- (NSString *)documentsPathForFileName:(NSString *)name
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    
+    return [documentsPath stringByAppendingPathComponent:name];
+}
+
 
 @end

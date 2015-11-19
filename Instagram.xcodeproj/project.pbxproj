@@ -102,16 +102,8 @@
 				0E6872AA1BFD72C2004C77F2 /* Application */,
 				0E6872A91BFD72B4004C77F2 /* Categories */,
 				0E6872941BFD0C44004C77F2 /* Scenes */,
-				0E6872681BFD06F8004C77F2 /* Supporting Files */,
 			);
 			path = Instagram;
-			sourceTree = "<group>";
-		};
-		0E6872681BFD06F8004C77F2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0E6872811BFD06F9004C77F2 /* InstagramUITests */ = {
