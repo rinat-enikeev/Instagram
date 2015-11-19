@@ -11,6 +11,10 @@
 
 @implementation UIViewController(InformUser)
 
+-(void)becomeUserInformSourceViewController {
+    [TSMessage setDefaultViewController:self.navigationController];
+}
+
 -(void)informUserWithErrorMessage:(NSString*)errorString withTitle:(NSString*)title {
     [TSMessage showNotificationWithTitle:title
                                 subtitle:errorString

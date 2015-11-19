@@ -12,6 +12,8 @@
 @interface UIViewController(InformUser)
 
 
+-(void)becomeUserInformSourceViewController;
+
 // app wide way to inform user (currently TSMessages)
 -(void)informUserWithErrorMessage:(NSString*)errorString withTitle:(NSString*)title;
 -(void)informUserWithWarnMessage:(NSString*)warningString withTitle:(NSString*)title;

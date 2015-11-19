@@ -68,6 +68,8 @@
             [self updateFeed];
         }
     }
+    
+    [self becomeUserInformSourceViewController];
 }
 
 - (void)dealloc
@@ -85,7 +87,7 @@
     if ([[Reachability reachabilityForInternetConnection] isReachable]) {
         [self renewFeed];
     } else {
-        [self informUserWithWarnMessage:NSLocalizedString(@"Internet connection unavaliable. ", @"Internet connection unavaliable. ") withTitle:NSLocalizedString(@"Warning", @"Warning")];
+        [self informUserWithWarnMessage:NSLocalizedString(@"Internet connection unavaliable. ", @"Internet connection unavaliable. ") withTitle:nil];
         
         [self fetchFeed:self.fetchedPostsLimit.integerValue];
     }
@@ -106,7 +108,7 @@
     NSArray* posts = [[_instaKit postService] fetchPostsWithPredicate:nil sortDescriptors:sds limit:limit error:&error];
     
     if (error != nil) {
-        [self informUserWithErrorMessage:error.localizedDescription withTitle:NSLocalizedString(@"Error", @"Error")];
+        [self informUserWithErrorMessage:error.localizedDescription withTitle:nil];
     } else {
         self.tableViewDataSource.posts = [posts copy];
         [self.tableView reloadData];
@@ -131,7 +133,7 @@
     } failure:^(NSError *error) {
         [self.activityIndicatorView stopAnimating];
         [self.refreshControl endRefreshing];
-        NSLog(@"%@", error);
+        [self informUserWithErrorMessage:error.localizedDescription withTitle:nil];
     }];
 }
 
@@ -147,7 +149,7 @@
             [[_instaKit blobService] renewImageBlobFor:imgStd withProgress:nil success:^(NSObject<InstaImage> *image) {
                 [self updateStdImageInPost:cell];
             } failure:^(NSError *error) {
-                NSLog(@"%@", error.localizedDescription);
+                [self informUserWithErrorMessage:error.localizedDescription withTitle:nil];
             }];
         } else {
             cell.postImageView.image = [UIImage imageNamed:@"InstagramPhotoPostPlaceholderImage"];
@@ -162,7 +164,7 @@
             [[_instaKit blobService] renewProfileImageBlobFor:author withProgress:nil success:^(NSObject<InstaUser> *user) {
                 [self updateProfilePictureIn:cell];
             } failure:^(NSError *error) {
-                NSLog(@"%@", error.localizedDescription);
+                [self informUserWithErrorMessage:error.localizedDescription withTitle:nil];
             }];
         } else {
             [cell.profileImageView setCircledImageFrom:[UIImage imageNamed:@"InstagramPhotoPostPlaceholderImage"] placeholderImage:[UIImage imageNamed:@"InstagramPhotoPostPlaceholderImage"] borderWidth:2];
@@ -207,6 +209,5 @@
     
     return [documentsPath stringByAppendingPathComponent:name];
 }
-
 
 @end

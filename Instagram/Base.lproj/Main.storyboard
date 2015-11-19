@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Up-9P-BcZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dbw-RU-ssa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Insta Popular Feed View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="iHl-lM-oe9">
+            <objects>
+                <navigationController id="dbw-RU-ssa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wXN-Ki-ypF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Up-9P-BcZ" kind="relationship" relationship="rootViewController" id="ORC-Vb-LjR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5z-h0-bGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="468"/>
+        </scene>
+        <!--Popular-->
         <scene sceneID="g5E-CP-I4B">
             <objects>
                 <tableViewController id="6Up-9P-BcZ" customClass="REInstaPopularFeedViewController" sceneMemberID="viewController">
@@ -15,7 +31,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="REInstaPopularFeedViewControllerDefaultCellReuseIdentifier" id="8zh-2R-VWf">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8zh-2R-VWf" id="czf-yd-3oh">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -28,6 +44,7 @@
                             <outlet property="delegate" destination="6Up-9P-BcZ" id="67F-sp-uY1"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Popular" id="xIo-Fn-c59"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7k9-9c-Ao6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
