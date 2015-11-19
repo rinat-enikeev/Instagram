@@ -6,5 +6,7 @@
 	<string>24fc1af302d3442c86e5e3c1e8708015</string>
 	<key>InstagramDbFileName</key>
 	<string>InstagramSharedSQLiteDB</string>
+	<key>InstagramPopularFeedFetchLimit</key>
+	<string>NSNumber(15)</string>
 </dict>
 </plist>

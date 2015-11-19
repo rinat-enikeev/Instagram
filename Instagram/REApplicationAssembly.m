@@ -38,6 +38,7 @@
     return [TyphoonDefinition withClass:[REInstaPopularFeedViewController class] configuration:^(TyphoonDefinition *definition)
             {
                 [definition injectProperty:@selector(instaKit) with:[self instaKit]];
+                [definition injectProperty:@selector(fetchedPostsLimit) with:TyphoonConfig(@"InstagramPopularFeedFetchLimit")];
             }];
 }
 

@@ -10,5 +10,7 @@
 
 @interface REInstaPopularFeedViewController : UITableViewController
 
+@property (strong, nonatomic, readonly) NSNumber* fetchedPostsLimit;
+
 @end
 
