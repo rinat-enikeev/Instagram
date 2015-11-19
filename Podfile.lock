@@ -1,6 +1,7 @@
 PODS:
   - AFNetworking (1.3.4)
-  - InstaKit (0.1.4):
+  - HexColors (2.3.0)
+  - InstaKit (0.1.7):
     - AFNetworking (~> 1.3.4)
     - InstaModel
     - RestKit
@@ -9,6 +10,7 @@ PODS:
     - RKValueTransformers (~> 1.1.0)
   - MHPrettyDate (1.1.1)
   - PureLayout (3.0.1)
+  - Reachability (3.2)
   - RestKit (0.26.0):
     - RestKit/Core (= 0.26.0)
   - RestKit/Core (0.26.0):
@@ -30,13 +32,15 @@ PODS:
     - TransitionKit (~> 2.2)
   - RKValueTransformers (1.1.2)
   - SOCKit (1.1)
-  - STXInstagramFeedView (0.1.7):
+  - STXInstagramFeedView (0.1.8):
     - InstaModel
     - MHPrettyDate
     - PureLayout
     - TTTAttributedLabel
     - UALogger
   - TransitionKit (2.2.1)
+  - TSMessages (0.9.13):
+    - HexColors (~> 2.3.0)
   - TTTAttributedLabel (1.13.4)
   - Typhoon (3.4.3):
     - Typhoon/no-arc (= 3.4.3)
@@ -46,21 +50,35 @@ PODS:
 DEPENDENCIES:
   - InstaKit
   - InstaModel
+  - Reachability
   - STXInstagramFeedView
+  - TSMessages (from `https://github.com/KrauseFx/TSMessages.git`)
   - Typhoon
+
+EXTERNAL SOURCES:
+  TSMessages:
+    :git: https://github.com/KrauseFx/TSMessages.git
+
+CHECKOUT OPTIONS:
+  TSMessages:
+    :commit: 3e5b2f6f9f9ac5a3ce7b2822cad606e56c223b5f
+    :git: https://github.com/KrauseFx/TSMessages.git
 
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
-  InstaKit: 836aa6b0f6a55227b09af144eaaecf1efc6d44f3
+  HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  InstaKit: cc483f1e40ed41e56cdabebf8efcdd4f8ad9495f
   InstaModel: 4f6543c563f65a63491c755e4be372dc2073d95b
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   MHPrettyDate: e0e5975041f0210c0542f4c5d7e3e44d1a8537be
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RestKit: 112fba5bd1f97598aac0db7981863d5fdc0263a2
   RKValueTransformers: 66ac5e4f077fdbe3496e792d89eeff4c3eb67701
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
-  STXInstagramFeedView: 3efb1d656d17e2fea35f46e5c3d3bb96256af973
+  STXInstagramFeedView: a58dca7a03a79b2f54a65d61809857058ac7541d
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
+  TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   Typhoon: 382b918b31d5d19a82922448af65f01f08102dc6
   UALogger: ccc041e5982dbd274ab5805f914076fef9bf29cf

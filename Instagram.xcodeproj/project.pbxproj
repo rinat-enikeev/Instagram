@@ -16,6 +16,7 @@
 		0E6872831BFD06F9004C77F2 /* InstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6872821BFD06F9004C77F2 /* InstagramUITests.m */; };
 		0E68728F1BFD0AF2004C77F2 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E68728E1BFD0AF2004C77F2 /* Configuration.plist */; };
 		0E6872921BFD0B27004C77F2 /* REApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6872911BFD0B27004C77F2 /* REApplicationAssembly.m */; };
+		0E6872AD1BFD73D9004C77F2 /* UIViewController+InformUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6872AC1BFD73D9004C77F2 /* UIViewController+InformUser.m */; };
 		2BEF0048B43D67826EB4E9E1 /* libPods-Instagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E19FEC0B22D7419479DB29 /* libPods-Instagram.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		0E6872911BFD0B27004C77F2 /* REApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REApplicationAssembly.m; sourceTree = "<group>"; };
 		0E68729A1BFD2440004C77F2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0E68729C1BFD2446004C77F2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0E6872AB1BFD73D9004C77F2 /* UIViewController+InformUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InformUser.h"; sourceTree = "<group>"; };
+		0E6872AC1BFD73D9004C77F2 /* UIViewController+InformUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InformUser.m"; sourceTree = "<group>"; };
 		631C0BCC656B6453DC44E058 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		84E19FEC0B22D7419479DB29 /* libPods-Instagram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Instagram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A2BB255CB2DE3767E027B6 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,9 +98,9 @@
 		0E6872671BFD06F8004C77F2 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				0E68726B1BFD06F8004C77F2 /* AppDelegate.h */,
-				0E68726C1BFD06F8004C77F2 /* AppDelegate.m */,
 				0E68728D1BFD0A51004C77F2 /* Assembly */,
+				0E6872AA1BFD72C2004C77F2 /* Application */,
+				0E6872A91BFD72B4004C77F2 /* Categories */,
 				0E6872941BFD0C44004C77F2 /* Scenes */,
 				0E6872681BFD06F8004C77F2 /* Supporting Files */,
 			);
@@ -107,10 +110,6 @@
 		0E6872681BFD06F8004C77F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0E6872741BFD06F8004C77F2 /* Assets.xcassets */,
-				0E6872791BFD06F8004C77F2 /* Info.plist */,
-				0E6872761BFD06F8004C77F2 /* LaunchScreen.storyboard */,
-				0E6872691BFD06F8004C77F2 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,6 +149,28 @@
 				0E68726F1BFD06F8004C77F2 /* REInstaPopularFeedViewController.m */,
 			);
 			name = PopularFeed;
+			sourceTree = "<group>";
+		};
+		0E6872A91BFD72B4004C77F2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0E6872AB1BFD73D9004C77F2 /* UIViewController+InformUser.h */,
+				0E6872AC1BFD73D9004C77F2 /* UIViewController+InformUser.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		0E6872AA1BFD72C2004C77F2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0E68726B1BFD06F8004C77F2 /* AppDelegate.h */,
+				0E68726C1BFD06F8004C77F2 /* AppDelegate.m */,
+				0E6872741BFD06F8004C77F2 /* Assets.xcassets */,
+				0E6872791BFD06F8004C77F2 /* Info.plist */,
+				0E6872761BFD06F8004C77F2 /* LaunchScreen.storyboard */,
+				0E6872691BFD06F8004C77F2 /* main.m */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		15EF21E036C124674863E2CF /* Pods */ = {
@@ -325,6 +346,7 @@
 			files = (
 				0E6872701BFD06F8004C77F2 /* REInstaPopularFeedViewController.m in Sources */,
 				0E6872921BFD0B27004C77F2 /* REApplicationAssembly.m in Sources */,
+				0E6872AD1BFD73D9004C77F2 /* UIViewController+InformUser.m in Sources */,
 				0E68726D1BFD06F8004C77F2 /* AppDelegate.m in Sources */,
 				0E68726A1BFD06F8004C77F2 /* main.m in Sources */,
 			);

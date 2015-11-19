@@ -12,6 +12,7 @@ pod 'InstaKit'
 pod 'InstaModel'
 pod 'Reachability'
 pod 'STXInstagramFeedView'
+pod 'TSMessages', :git => 'https://github.com/KrauseFx/TSMessages.git'
 pod 'Typhoon'
 xcodeproj 'Instagram'
 end

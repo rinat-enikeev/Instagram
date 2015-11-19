@@ -45,10 +45,9 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSData* data = (NSData* )responseObject;
-         NSString *uuid = [[NSUUID UUID] UUIDString];
+         NSString *uuidFilename = [[NSUUID UUID] UUIDString];
          NSError* error = nil;
-         NSString * path = [self documentsPathForFileName:uuid];
-         [data writeToFile:[self documentsPathForFileName:uuid] options:NSDataWritingAtomic error:&error];
+         [data writeToFile:[self documentsPathForFileName:uuidFilename] options:NSDataWritingAtomic error:&error];
 
          if (error != nil) {
              NSLog(@"Error downloading image: %@", error);
@@ -57,10 +56,10 @@
              }
          } else {
              REInstaImage* reImage = (REInstaImage*)image; // assertion is on first method line
-             reImage.localPath = path;
+             reImage.localPath = uuidFilename;
              [reImage.managedObjectContext performBlock:^{
                  NSError* error = nil;
-                 [reImage.managedObjectContext save:&error];
+                 [reImage.managedObjectContext saveToPersistentStore:&error];
                  if (error != nil) {
                      NSLog(@"Error downloading image: %@", error);
                      if (failure != nil) {
@@ -99,10 +98,9 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSData* data = (NSData* )responseObject;
-         NSString *uuid = [[NSUUID UUID] UUIDString];
+         NSString *uuidFilename = [[NSUUID UUID] UUIDString];
          NSError* error = nil;
-         NSString * path = [self documentsPathForFileName:uuid];
-         [data writeToFile:[self documentsPathForFileName:uuid] options:NSDataWritingAtomic error:&error];
+         [data writeToFile:[self documentsPathForFileName:uuidFilename] options:NSDataWritingAtomic error:&error];
          
          if (error != nil) {
              NSLog(@"Error downloading image: %@", error);
@@ -111,10 +109,10 @@
              }
          } else {
              REInstaUser* reUser = (REInstaUser*)user; // assertion is on first method line
-             reUser.profilePictureLocalPath = path;
+             reUser.profilePictureLocalPath = uuidFilename;
              [reUser.managedObjectContext performBlock:^{
                  NSError* error = nil;
-                 [reUser.managedObjectContext save:&error];
+                 [reUser.managedObjectContext saveToPersistentStore:&error];
                  if (error != nil) {
                      NSLog(@"Error downloading image: %@", error);
                      if (failure != nil) {

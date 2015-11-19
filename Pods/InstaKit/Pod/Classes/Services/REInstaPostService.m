@@ -13,6 +13,7 @@
 @property (strong, nonatomic) RKManagedObjectStore* store;
 @property (strong, nonatomic) REInstaRKMapper* mapper;
 @property (strong, nonatomic) RKObjectManager* objectManager;
+@property (strong, nonatomic) NSString* postEntityName;
 @end
 
 @implementation REInstaPostService
@@ -29,6 +30,7 @@
         self.store = store;
         self.objectManager = objectManager;
         self.mapper = mapper;
+        self.postEntityName = NSStringFromClass([REInstaPost class]);
     }
     return self;
 }
@@ -47,13 +49,49 @@
     op.managedObjectCache = _store.managedObjectCache;
     
     [op setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        success(mappingResult.array);
+        
+        [self.store.mainQueueManagedObjectContext performBlock:^{
+            NSError* error = nil;
+            [self.store.mainQueueManagedObjectContext saveToPersistentStore:&error];
+            if (error != nil) {
+                NSLog(@"Error saving renewed popular posts: %@", error);
+                if (failure != nil) {
+                    failure(error);
+                }
+            } else {
+                if (success != nil) {
+                    success(mappingResult.array);
+                }
+            }
+        }];
+        
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        failure(error);
+        if (failure != nil) {
+            failure(error);
+        }
     }];
     
     [_objectManager enqueueObjectRequestOperation:op];
     
+}
+
+-(NSArray<NSObject<InstaPost>*> *)fetchPostsWithPredicate:(NSPredicate*)predicate
+                                          sortDescriptors:(NSArray<NSSortDescriptor *>*)sortDescriptors
+                                                    limit:(NSUInteger)limit error:(NSError**)error{
+    NSManagedObjectContext* moc = _store.mainQueueManagedObjectContext;
+    NSFetchRequest *r = [NSFetchRequest fetchRequestWithEntityName:self.postEntityName];
+    r.predicate = predicate;
+    r.sortDescriptors = sortDescriptors;
+    [r setFetchLimit:limit];
+    
+    NSError* fetchError = nil;
+    NSArray *results = [moc executeFetchRequest:r error:&fetchError];
+    
+    if (fetchError != nil && error != NULL) { // check to avoid crash if **error is not provided
+        *error = fetchError;
+    }
+    
+    return results;
 }
 
 @end

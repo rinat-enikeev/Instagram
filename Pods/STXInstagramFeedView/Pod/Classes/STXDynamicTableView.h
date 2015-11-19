@@ -23,30 +23,4 @@
 #import "STXCommentCell.h"
 #import "STXUserActionCell.h"
 
-#endif /* STXDynamicTableView_h */
-
-//#import <STXInstagramFeedView/STXFeedTableViewDelegate.h>
-//#import <STXInstagramFeedView/STXFeedTableViewDataSource.h>
-//
-//#import <STXInstagramFeedView/UIViewController+Indicator.h>
-//#import <STXInstagramFeedView/UIViewController+Sharing.h>
-//#import <STXInstagramFeedView/UIImageView+Circling.h>
-//
-//#import <STXInstagramFeedView/STXFeedPhotoCell.h>
-//#import <STXInstagramFeedView/STXLikesCell.h>
-//#import <STXInstagramFeedView/STXCaptionCell.h>
-//#import <STXInstagramFeedView/STXCommentCell.h>
-//#import <STXInstagramFeedView/STXUserActionCell.h>
-
-//#import "UITableViewSources/STXFeedTableViewDelegate.h"
-//#import "UITableViewSources/STXFeedTableViewDataSource.h"
-//
-//#import "Categories/UIViewController+Indicator.h"
-//#import "Categories/UIViewController+Sharing.h"
-//#import "Categories/UIImageView+Circling.h"
-//
-//#import "Cells/STXFeedPhotoCell.h"
-//#import "Cells/STXLikesCell.h"
-//#import "Cells/STXCaptionCell.h"
-//#import "Cells/STXCommentCell.h"
-//#import "Cells/STXUserActionCell.h"
+#endif 
