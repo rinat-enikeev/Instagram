@@ -10,6 +10,7 @@ target :'Instagram' do
 platform :ios, '8.0'
 pod 'InstaKit'
 pod 'InstaModel'
+pod 'Reachability'
 pod 'STXInstagramFeedView'
 pod 'Typhoon'
 xcodeproj 'Instagram'
