@@ -17,6 +17,7 @@
 		04D245043990CC6FC57F8C32D58F44B2 /* MHPrettyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4AC59EA7BF34687C65AEA3DBB92462 /* MHPrettyDate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		05A1F622513EDFD7EFD1A092FDBE5A8D /* TyphoonBundledImageTypeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF9A039444BC634CC2ECA1451D4EB60 /* TyphoonBundledImageTypeConverter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		064F41022AAC771054499F57A193C235 /* TyphoonInjectionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5DCB82297CBB6E826139FF3E72C06F /* TyphoonInjectionContext.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		068B2292441B0270F735FBB5EE5465CE /* TSMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E0E0B4B4A0083AC87916F87BCE70507 /* TSMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0693E85C34DD9680B87744422A31A967 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1560D129F131BB98C7D58C8B61C6F783 /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		06A210E0FEFEC71280A40B57811B0E81 /* RKOperationStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0738CF1F362295CE3948FB2EEB609250 /* RKOperationStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07C4560A6C3340A162DB127E7C3BC45F /* REInstaRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 94207B55BDAE3B9BC30015D568ADA9BD /* REInstaRelationship.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -38,6 +39,7 @@
 		0D420C7747139C2B8A0EF88654C93680 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 866F44D169AB8F96629E71A8D9EFC731 /* HexColors.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0D884EB710ECF4E1E99827B63B7AE21B /* TyphoonInjectionByDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AB323DDDE82F984BCD80AD68398B /* TyphoonInjectionByDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0EEABB9AABDED87C8B9F585D82062063 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3725D87BFB9C25F6C5B119C497FCF9 /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EF580B8425BF365EA27A71D84AB384F /* TSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D26FBDE0FCF81EEFA544E0F405F9D61 /* TSMessages-dummy.m */; };
 		0F11D0C6E07F4DE660358EC6A8FA2CF7 /* TyphoonNSURLTypeConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = A2922F7197A6AC6B8D5772B69F2377A5 /* TyphoonNSURLTypeConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F3F47441994C31761C6DFDDD297DCD0 /* TyphoonMethod+InstanceBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 544203048566B93575E27CC604F20279 /* TyphoonMethod+InstanceBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FA3537120147C6C89E7B19B33EB65C1 /* TyphoonConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D72C19C9E4C93F906ADA2CCEAC5DD3 /* TyphoonConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +63,7 @@
 		16C7D4CCD2D1B3BC750FFC4314E22222 /* NSInvocation+TCFUnwrapValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 763A329C950560632FE64304EC2E1B03 /* NSInvocation+TCFUnwrapValues.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16D4ED6BF313195B2911F4DCE80559E9 /* RKMapperOperation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EEDCFF848CE420A45970E7FD469018A1 /* RKMapperOperation_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17154D98AE9DEE8941244BEE64ED726E /* TyphoonTypeConversionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1038C8270ECA6EF7570C257080B460DF /* TyphoonTypeConversionUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		177CD22DF06F0B6F3F08BA42798D2772 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC87F37572EA00B28D3A601BB373DB9 /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		17C6F2AB240E02B57E5EACC167496633 /* REInstaRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F9A9F9CC72EACF6AA91FBA403D9D6F5 /* REInstaRelationship.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18089E48171E44BB06B3449364068C82 /* REInstaUserOnPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF1A7B6E7C2718DF2D1C09168EB0E6 /* REInstaUserOnPost+CoreDataProperties.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1820A7DC2F4670D7A14DA447B1785EE1 /* REInstaRelationship+InstaRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80115A3EEDF40CBB8418E98823DC69 /* REInstaRelationship+InstaRelationship.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -92,13 +95,10 @@
 		2692971C07509A570ADBF5D16DDB8071 /* REInstaLocation+InstaLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F0A41E8B849F0EDD651EDAB468AB63 /* REInstaLocation+InstaLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26B34C873CDC84E3F0E461870CC13E49 /* TyphoonStoryboard.h in Headers */ = {isa = PBXBuildFile; fileRef = D1DB21A963E1A0715BCB5F4BF8559E7D /* TyphoonStoryboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2700777E6A5527B6081A0F2C3D7F331E /* RKPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D268C285C4EA0C5BF3E47F825DABD0 /* RKPaginator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		27088F58DF0EE56EA616FFC6534D27FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBF1B5905981982AC5DF9B283F8D36 /* Foundation.framework */; };
 		2742C51E9D6370BDF4B45E0F58399726 /* REInstaPostService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0923F624C71C7D564CEAC3654C8FE /* REInstaPostService.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		27B5CE9ADFC248C12996246250691E48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBF1B5905981982AC5DF9B283F8D36 /* Foundation.framework */; };
-		27CCBCEACC24982F7C844C13DA1465DE /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D73E81A2D3B830FDB448045B562209 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28B4F6B32925911ABF571A5EBB667A13 /* STXLikesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3B60AC748C090F5C806FE36D9C1A22 /* STXLikesCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		28C0B6E2C1C59153B570CB244E805BD6 /* TyphoonObjectWithCustomInjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 37BFE53A4FC1D5F406F5CEEAAAD39631 /* TyphoonObjectWithCustomInjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28CF4F2678AA1385BB2D08076CB20795 /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C986C531345E410247FC8C6F048A4 /* TSMessageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2A8C876D5BEA7B0CFFB8596FA1B2428D /* NSManagedObjectContext+RKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8AC6C7B084BDB4238C282682017AD14 /* NSManagedObjectContext+RKAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2B9673627D0184E798ECE93CA15484E8 /* RestKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 846940C5DCA753CA0C7FF0267BFB1C8C /* RestKit-dummy.m */; };
 		2BCDE139FEA17730F4078A0A5904C1A2 /* lcl_config_components_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F444FD8002BD57DDB340957F2488012 /* lcl_config_components_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -122,7 +122,6 @@
 		319FB8C9E2CBD928159336BCC11D4593 /* SOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BB1F40E4C5B2BF7E830217ABF5E962 /* SOCKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3210CBE823B29CE4A1076F59BE0AC4A4 /* TyphoonPatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1F33D8E5580F331065754468356D7E /* TyphoonPatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33210AA7D6DA025205085D7041D44DBD /* STXCaptionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 117E023E36E9F70C997D1236B0D10282 /* STXCaptionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33753F8FA6F056AB817E75C69D3194F4 /* TSMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E0E0B4B4A0083AC87916F87BCE70507 /* TSMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33DE38606FDE3DA1A8A56BCCD1DEB2E6 /* TyphoonMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CDF298B6C46D7350CA34D3A4C29548 /* TyphoonMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3404752335F67EFE3814AF58CEF7F2A8 /* TyphoonInjectionByObjectInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 981FE04736B83EFB3E653E5EB4F3B963 /* TyphoonInjectionByObjectInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		343A9C5BF94CE72136DFE4E737D7933A /* TyphoonAssemblySelectorAdviser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2408183056F9FABF8CAE37758AF9DF78 /* TyphoonAssemblySelectorAdviser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,6 +169,7 @@
 		464AF8001FCAEE60956EBC05ACC35502 /* REInstaPost+InstaPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6233E255020F6EC2B4B2ECF4A9E93A29 /* REInstaPost+InstaPost.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		46894B35D52E1C8F6B6E63F12D81E00A /* TyphoonPropertyInjection.h in Headers */ = {isa = PBXBuildFile; fileRef = B520D13F1B1AE2D3895B75CCD1979FE2 /* TyphoonPropertyInjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46D64DCCE47C3D7B211905937F93C287 /* REInstaBlobService.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A3AE0A5DF5328AB1332B88FC89AF29 /* REInstaBlobService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		472BCB1DE7F4F2BF9D59ABBEC329056A /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE5DD4883ABFAF6F116B6EE93932F96 /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47D187C8BD5B67E095A240209F2F90B7 /* RKObjectRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA6BE9C8EB29137F1793B3CD05BFBF7 /* RKObjectRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		483227FCEC628251C5447E278D091244 /* REInstaBlockDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F6C5305DE00DCA13B4662D9595E4ED /* REInstaBlockDefinitions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48941BA507CF86BC5FFAE47AD7EA9B10 /* TyphoonComponentFactory+InstanceBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9941BDE65F9367E6B9F8791C945EADD0 /* TyphoonComponentFactory+InstanceBuilder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -230,7 +230,6 @@
 		662B80CD9519F3B6A018A80E88F776A3 /* STXLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 951912C968BA79697BBBC45D267E8B19 /* STXLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		666548C6EFBEF3EA69908C2D7DE9080D /* TyphoonRuntimeArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A2867622587D8FAEB42724B0BDC76A17 /* TyphoonRuntimeArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		66731B20202DE5A47B7D108921D8E15A /* NSObject+DeallocNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A467B02A84B3B57AFF0AED13AA38455C /* NSObject+DeallocNotification.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		66D892035C148F6DDDBDE694DE856D54 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC87F37572EA00B28D3A601BB373DB9 /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		66F21367EEB160E296EAD22AD481CB01 /* REInstaCaption+InstaCaption.m in Sources */ = {isa = PBXBuildFile; fileRef = A318F1EB3FEF9014007074F2FBA0A915 /* REInstaCaption+InstaCaption.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		67135E0252A4F18283B376423174A20D /* NSDictionary+CustomInjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B710167F1671B1835B0AF345E44DF69 /* NSDictionary+CustomInjection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		675F58CD828E7AFD5091C0CE2CE28FFE /* REInstaVideo+InstaVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C3E35CBCB953A98AF04F3654291BB6 /* REInstaVideo+InstaVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -265,8 +264,8 @@
 		7494C53E904FECC8108F14B875ED3C10 /* TyphoonViewHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 587C6E51F56046E90C8375A3373686FB /* TyphoonViewHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CC2681AFDB3ACA79F8BF2F21584876 /* RKRouteSet.h in Headers */ = {isa = PBXBuildFile; fileRef = AE80284535DA778B695DED213ED84C52 /* RKRouteSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7517F1AD6D007C64085892B1B6EF6EDA /* RKManagedObjectStore.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FAEF12363BFBEB76723C441735E288 /* RKManagedObjectStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		754CED714DA95BD0F12AD7881371D6AD /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C986C531345E410247FC8C6F048A4 /* TSMessageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		76274453A7C13B007FFA0BA694056E50 /* TyphoonInjectionByComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A252F6588C92B63710E2068E9C646B /* TyphoonInjectionByComponentFactory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7653D0D5C3B8E0434F1384093B4EDE1C /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE5DD4883ABFAF6F116B6EE93932F96 /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		767BA00477544828C76843F9BC0685C4 /* TyphoonPathResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3002F9D7216C88D89E5D719881A33C85 /* TyphoonPathResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76FF615A0B52FC2D09838A9A3A82CEF3 /* RKObjectMappingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 352F438ED64F17C4926B1CBC481258B8 /* RKObjectMappingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77925CC8A0E51687782EB0C718DB630F /* Typhoon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8895AD0F282EC2D18C12033454B5C99 /* Typhoon-dummy.m */; };
@@ -351,6 +350,7 @@
 		98DDED26EDBD27FAAC5B5CD33D52E4F2 /* TyphoonInjectedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED5B0908A47BDD366DC52036CF9361F /* TyphoonInjectedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		990BADAB24DD939F3075EC44269611C6 /* REInstaAttribution+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9664D8B99E9406DF1098B2748B075FA2 /* REInstaAttribution+CoreDataProperties.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9BA17E719924CAE67B6A4BDC996324FF /* TyphoonStartup.m in Sources */ = {isa = PBXBuildFile; fileRef = 551C4E539500AA284C7960F0CCF7488C /* TyphoonStartup.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9BE285D6112F3DDD0D3CDA7D08710BA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBF1B5905981982AC5DF9B283F8D36 /* Foundation.framework */; };
 		9D3C65544C9BCB482A400568C46A4615 /* RKValueTransformers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86414B92B0DA2BB4F0146CE8F96DE078 /* RKValueTransformers-dummy.m */; };
 		9D8DE1A69436C47DDC5E665042F5235F /* RKAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F884BB405B01B50C7FFDD4C2493C71 /* RKAttributeMapping.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9DDE0829B0D202CD8BCAF282F2B69396 /* STXAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9239269F053B1AC9E38D22291BD8E3 /* STXAttributedLabel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -362,6 +362,7 @@
 		A0AE2D0A941CE1F304B725B5CF487459 /* TyphoonPlistStyleConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D480AAEE32AD49772F1AD2EE6D29AE4C /* TyphoonPlistStyleConfiguration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A0FA13808DC853641AD7910A53715D2E /* RKDictionaryUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EB087BE9E499CA184DF4E1A85165E45B /* RKDictionaryUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A12AF1AD0E76732127C15D3A2B96A4CB /* RKRelationshipConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E145F933A697B8080F354BBBDA2375 /* RKRelationshipConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A156ED1BECDC27D6ABE29ED57E2DC56C /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D73E81A2D3B830FDB448045B562209 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A15996A2CEA46A6249CF6E00DC49245A /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 681279167A38DE664ED3004EF52D223B /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A1D39E61CDC8BCFF5C26B38A349CF3C4 /* MHPrettyDate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1526491C346D1F3CCD9CDAC6418FC05 /* MHPrettyDate-dummy.m */; };
 		A1DB5688F8AC6FA13E2B4895029C644B /* TyphoonParentReferenceHydratingPostProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = D684BB0EF1C72CB650E0734CBEDB7056 /* TyphoonParentReferenceHydratingPostProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -475,7 +476,6 @@
 		D583E24DAEC17684AC819BBCA3B0DDE3 /* RKMappingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 13BCB998A04E767B98D2EE7597CCCB02 /* RKMappingOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D59478969CE6E17D121D4E36251F7167 /* REInstaCaption+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE66D9077FBEB62A8002B25A772C2D4 /* REInstaCaption+CoreDataProperties.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D5E802FF20B1F22269834DCDE8C7BE96 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7B46A72A90714056355057722A87A /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D7A27D3FFC278513DAFD4DE998A33E91 /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD8CF9F1ABB7DEA501D44E24FEC7DAE /* TSMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D86FE2FF083E331466979D86E91B8C22 /* UALogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D91D02731F47C27D6276192DB16DA3CD /* UALogger-dummy.m */; };
 		D917CE32EE935BFC5492AC2F73D3821C /* REInstaRelationship+InstaRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 6521A22A3F67292207CFD3FD6BD61EA8 /* REInstaRelationship+InstaRelationship.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9D96DFB277740C77FCB9126B739D313 /* RKErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2508CF507503EC5D7434CCBD9BCA6274 /* RKErrorMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -512,9 +512,9 @@
 		ED3AFD80302B460142BA575569F232D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A71729A756EC3756E73B3055A28E4A5 /* SystemConfiguration.framework */; };
 		ED4ECDAC11F885A77723CE05B89A65AA /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C51E8833E13D6759034B08102016D5A9 /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE7979B0D5FDB5E6903DE05EB371B226 /* TyphoonSwizzlerDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A3B95F5FC0E5198B0676DCF606457AD /* TyphoonSwizzlerDefaultImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEAFE3D81BCBDAE323CD4DCFA0A8C7E8 /* TSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D26FBDE0FCF81EEFA544E0F405F9D61 /* TSMessages-dummy.m */; };
 		EED9C297733E1A3FA6C11C6D7D068757 /* REInstaPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA22D025292BAA9459FEB5EC407EFE /* REInstaPost.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EF04D380AF472C9ABBCD2493903F2CCD /* STXFeedPhotoCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA1123D594AD4DD4F1FF5E24C29DC046 /* STXFeedPhotoCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0C54B80F04178F832D922B20971E633 /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD8CF9F1ABB7DEA501D44E24FEC7DAE /* TSMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F0CDC9B9A9A63A4C145F98338159159A /* RKObjectUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D0B8D8BC523463B1FED8BC67FF4C1F /* RKObjectUtilities.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F109D52F700C49F891DFFAFAF295CC1D /* RKMapperOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D30438175E2EF927CBB03EEFA45A3E0 /* RKMapperOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F12CD34849EB3C8FC50F90D7977F99B6 /* contents in Sources */ = {isa = PBXBuildFile; fileRef = B31087F197EFBFAE3DFD8FCC072F8DF4 /* contents */; };
@@ -580,6 +580,13 @@
 			remoteGlobalIDString = 7C295592B845D1F56B9D97CF2068286D;
 			remoteInfo = PureLayout;
 		};
+		0C6CEED391EE442D3E06EF732A8F1495 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9EF397B95762DDB254C71DDCB4B1381;
+			remoteInfo = HexColors;
+		};
 		210154B53117706FE81043E7480BE884 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -593,6 +600,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 224236E785CA44A0A9610DA45F4CEBBF;
 			remoteInfo = TTTAttributedLabel;
+		};
+		31328F90B74361D5D185DEE8373ED449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5A2CE438A4EBAD93C9E98973B7226F8;
+			remoteInfo = Reachability;
 		};
 		3323CCDAF8BC6CA6A6A6D183C307A3BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -608,7 +622,7 @@
 			remoteGlobalIDString = 0DB238E03A730122B5132E810F2CFE07;
 			remoteInfo = SOCKit;
 		};
-		51789D498D3D3868936F3789D6CD3F6C /* PBXContainerItemProxy */ = {
+		4996F6C4BE839ECDFCDE26D28B5BB31D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -692,6 +706,13 @@
 			remoteGlobalIDString = E7B7978CA7B980F6D00AE032AE2B16C8;
 			remoteInfo = TransitionKit;
 		};
+		98327D41173DF4654E54265D139A29C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E7E07BB0416B12E34EE082C4B3E496E;
+			remoteInfo = TSMessages;
+		};
 		99E195DC5A6F146798846D158B47C5CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -759,7 +780,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 314976FA9E32BDC6C8EBF72F4E727173;
+			remoteGlobalIDString = 9E7E07BB0416B12E34EE082C4B3E496E;
 			remoteInfo = TSMessages;
 		};
 		FD12060723A6EE03256A5D3945B2E690 /* PBXContainerItemProxy */ = {
@@ -1428,14 +1449,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		294F022E0F3AA2458BF3BAAA8EBA7D92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27088F58DF0EE56EA616FFC6534D27FE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2EC690D51801FA715D34F4308A09C8C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1472,6 +1485,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB9F56BA4F14229512F8835D653B38F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6126FD9DB5882C35731C269984FB5080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE285D6112F3DDD0D3CDA7D08710BA7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2792,16 +2813,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A3BC5AF636471E223F8029EBA91C4BD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7653D0D5C3B8E0434F1384093B4EDE1C /* TSBlurView.h in Headers */,
-				27CCBCEACC24982F7C844C13DA1465DE /* TSMessage.h in Headers */,
-				33753F8FA6F056AB817E75C69D3194F4 /* TSMessageView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4BAA1C204FA8C725BC6E418615D8FB01 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2891,6 +2902,16 @@
 				F5E982E89BE83F9F5352CE99BEBEC6BB /* PureLayout+Internal.h in Headers */,
 				D31930F7E14F1B1885C4019A29608703 /* PureLayout.h in Headers */,
 				8AE371C3F7A8A8648C9E6218417122F9 /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D6A6860159D0E89C4612F956729480 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472BCB1DE7F4F2BF9D59ABBEC329056A /* TSBlurView.h in Headers */,
+				A156ED1BECDC27D6ABE29ED57E2DC56C /* TSMessage.h in Headers */,
+				068B2292441B0270F735FBB5EE5465CE /* TSMessageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3024,24 +3045,6 @@
 			productReference = 732C4E3289A12DA953FBDF3D08B5A426 /* libTyphoon.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		314976FA9E32BDC6C8EBF72F4E727173 /* TSMessages */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 219B3D012D3AD225A8130F818D46755C /* Build configuration list for PBXNativeTarget "TSMessages" */;
-			buildPhases = (
-				47C4C0092D875899556487A6ECEDA151 /* Sources */,
-				294F022E0F3AA2458BF3BAAA8EBA7D92 /* Frameworks */,
-				2A3BC5AF636471E223F8029EBA91C4BD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AC17E9C219FA243E92FBE64F4865E3CB /* PBXTargetDependency */,
-			);
-			name = TSMessages;
-			productName = TSMessages;
-			productReference = 86D0EC151CACBE3B9F5E0E0337513F88 /* libTSMessages.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		3EA01DD72E8CC340390A42940BC7F718 /* STXInstagramFeedView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 750DDDF8788F1A1F2780FCF920573391 /* Build configuration list for PBXNativeTarget "STXInstagramFeedView" */;
@@ -3053,9 +3056,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				62D33B6490342BB2DC5DA54C9575442F /* PBXTargetDependency */,
 				DD9FD2FAB339321AAE30719A6AB18F69 /* PBXTargetDependency */,
 				69BF10DE1C2D9B46605187D97F98F0A3 /* PBXTargetDependency */,
+				6C5D56870AF46DA83C04D8D62583CE60 /* PBXTargetDependency */,
 				D3FB7B6A2BA7A290D57239211F957D2D /* PBXTargetDependency */,
+				219E10F7256E5E322DCC421C541A698D /* PBXTargetDependency */,
 				B6C638F89EC07FDEC76EC3C680F19E67 /* PBXTargetDependency */,
 				F8D43B43C32A429D558E41384C67DDA4 /* PBXTargetDependency */,
 			);
@@ -3170,6 +3176,24 @@
 			name = ISO8601DateFormatterValueTransformer;
 			productName = ISO8601DateFormatterValueTransformer;
 			productReference = 4787A3004581E8EB680406AC573341AB /* libISO8601DateFormatterValueTransformer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9E7E07BB0416B12E34EE082C4B3E496E /* TSMessages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3D98EFFB1A37486962F560947A514DF /* Build configuration list for PBXNativeTarget "TSMessages" */;
+			buildPhases = (
+				F1D4343DCCDA75786AD10027C928E634 /* Sources */,
+				6126FD9DB5882C35731C269984FB5080 /* Frameworks */,
+				99D6A6860159D0E89C4612F956729480 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A367D1CD0ED93558860A84854A0B255E /* PBXTargetDependency */,
+			);
+			name = TSMessages;
+			productName = TSMessages;
+			productReference = 86D0EC151CACBE3B9F5E0E0337513F88 /* libTSMessages.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		A2425FE7078FB359A4CD1FB22C54FE29 /* InstaKit-InstaKit */ = {
@@ -3362,7 +3386,7 @@
 				3EA01DD72E8CC340390A42940BC7F718 /* STXInstagramFeedView */,
 				41D26E6F25BC76601109D3CCFA584F93 /* STXInstagramFeedView-STXInstagramFeedView */,
 				E7B7978CA7B980F6D00AE032AE2B16C8 /* TransitionKit */,
-				314976FA9E32BDC6C8EBF72F4E727173 /* TSMessages */,
+				9E7E07BB0416B12E34EE082C4B3E496E /* TSMessages */,
 				224236E785CA44A0A9610DA45F4CEBBF /* TTTAttributedLabel */,
 				2FC587539334BFB60E2C174ED7CDA243 /* Typhoon */,
 				A3AC513AEA2B2DACB1DEEC70E7672515 /* UALogger */,
@@ -3420,17 +3444,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47C4C0092D875899556487A6ECEDA151 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66D892035C148F6DDDBDE694DE856D54 /* TSBlurView.m in Sources */,
-				D7A27D3FFC278513DAFD4DE998A33E91 /* TSMessage.m in Sources */,
-				EEAFE3D81BCBDAE323CD4DCFA0A8C7E8 /* TSMessages-dummy.m in Sources */,
-				28CF4F2678AA1385BB2D08076CB20795 /* TSMessageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3757,6 +3770,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1D4343DCCDA75786AD10027C928E634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				177CD22DF06F0B6F3F08BA42798D2772 /* TSBlurView.m in Sources */,
+				F0C54B80F04178F832D922B20971E633 /* TSMessage.m in Sources */,
+				0EF580B8425BF365EA27A71D84AB384F /* TSMessages-dummy.m in Sources */,
+				754CED714DA95BD0F12AD7881371D6AD /* TSMessageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF1EB5514E80A9B0BFDFEAAD3262E125 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3780,6 +3804,12 @@
 			name = AFNetworking;
 			target = 61681BF0E677683490353B846C61A129 /* AFNetworking */;
 			targetProxy = 69F6685473578C9D048D32845D11D891 /* PBXContainerItemProxy */;
+		};
+		219E10F7256E5E322DCC421C541A698D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TSMessages;
+			target = 9E7E07BB0416B12E34EE082C4B3E496E /* TSMessages */;
+			targetProxy = 98327D41173DF4654E54265D139A29C1 /* PBXContainerItemProxy */;
 		};
 		21DD4F883AE963F01F1FACA9ED0860EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3808,7 +3838,7 @@
 		44BEA27D77524685B9BD7BE1EFFAF7DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TSMessages;
-			target = 314976FA9E32BDC6C8EBF72F4E727173 /* TSMessages */;
+			target = 9E7E07BB0416B12E34EE082C4B3E496E /* TSMessages */;
 			targetProxy = F4088115093155EF453E2F1211D16FCF /* PBXContainerItemProxy */;
 		};
 		44F8DCB67FBAF9EE6553A0F6BAD038D2 /* PBXTargetDependency */ = {
@@ -3829,6 +3859,12 @@
 			target = 43D253D182965CB2EF4FE2634D758F2E /* RKValueTransformers */;
 			targetProxy = 947460F607A461B97A9D64AB7E854518 /* PBXContainerItemProxy */;
 		};
+		62D33B6490342BB2DC5DA54C9575442F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = E9EF397B95762DDB254C71DDCB4B1381 /* HexColors */;
+			targetProxy = 4996F6C4BE839ECDFCDE26D28B5BB31D /* PBXContainerItemProxy */;
+		};
 		69BF10DE1C2D9B46605187D97F98F0A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
@@ -3841,6 +3877,12 @@
 			target = 61681BF0E677683490353B846C61A129 /* AFNetworking */;
 			targetProxy = A2265FE1CF56868CFDA50860255BBBFF /* PBXContainerItemProxy */;
 		};
+		6C5D56870AF46DA83C04D8D62583CE60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reachability;
+			target = A5A2CE438A4EBAD93C9E98973B7226F8 /* Reachability */;
+			targetProxy = 31328F90B74361D5D185DEE8373ED449 /* PBXContainerItemProxy */;
+		};
 		8F8C69CACF27B2B36095A7B9D8F54E1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TransitionKit;
@@ -3852,6 +3894,12 @@
 			name = Reachability;
 			target = A5A2CE438A4EBAD93C9E98973B7226F8 /* Reachability */;
 			targetProxy = 62C271020DA2002BECCAD610321C0239 /* PBXContainerItemProxy */;
+		};
+		A367D1CD0ED93558860A84854A0B255E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = E9EF397B95762DDB254C71DDCB4B1381 /* HexColors */;
+			targetProxy = 0C6CEED391EE442D3E06EF732A8F1495 /* PBXContainerItemProxy */;
 		};
 		A6915800FD231BA97B7937B006DEE464 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3870,12 +3918,6 @@
 			name = SOCKit;
 			target = 0DB238E03A730122B5132E810F2CFE07 /* SOCKit */;
 			targetProxy = 48F005018CF9E17B3A9C379F4E788CDC /* PBXContainerItemProxy */;
-		};
-		AC17E9C219FA243E92FBE64F4865E3CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HexColors;
-			target = E9EF397B95762DDB254C71DDCB4B1381 /* HexColors */;
-			targetProxy = 51789D498D3D3868936F3789D6CD3F6C /* PBXContainerItemProxy */;
 		};
 		B036B64BF6C173B52D50C51CD2D8D5A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3993,24 +4035,6 @@
 			};
 			name = Debug;
 		};
-		173D42DB56D32A66F8F4D20E3FB80615 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DF22ED20991AF9171AFE81ED11F5D37 /* TSMessages.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		188A5C1750A21128539FBA51E67769EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CDAB86585AF361B03A4FA81A2302A624 /* InstaKit.xcconfig */;
@@ -4020,6 +4044,24 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		18E9AB080F38F44BF67EE55E567E4BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF22ED20991AF9171AFE81ED11F5D37 /* TSMessages.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -4083,24 +4125,6 @@
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/InstaKit/InstaKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		26A2A59BF5047495272F68CCF61DE3F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DF22ED20991AF9171AFE81ED11F5D37 /* TSMessages.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -4481,6 +4505,24 @@
 			};
 			name = Release;
 		};
+		C1D14BF31A63D4D3644EF61480533FD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF22ED20991AF9171AFE81ED11F5D37 /* TSMessages.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TSMessages/TSMessages-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		C377ABD1F107F6A1ED4543DCBA2832AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492AEBFE0445A05C4960FF7B0EFA795D /* RKValueTransformers.xcconfig */;
@@ -4710,15 +4752,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		219B3D012D3AD225A8130F818D46755C /* Build configuration list for PBXNativeTarget "TSMessages" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				173D42DB56D32A66F8F4D20E3FB80615 /* Debug */,
-				26A2A59BF5047495272F68CCF61DE3F8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		22BC742DBD70DF805FE321556D08E86C /* Build configuration list for PBXNativeTarget "RestKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -4850,6 +4883,15 @@
 			buildConfigurations = (
 				E744AB36EAEFEF1EDFAB2722F0C047E4 /* Debug */,
 				B2A1A3433A671EC474679E92C4F4A970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3D98EFFB1A37486962F560947A514DF /* Build configuration list for PBXNativeTarget "TSMessages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1D14BF31A63D4D3644EF61480533FD1 /* Debug */,
+				18E9AB080F38F44BF67EE55E567E4BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

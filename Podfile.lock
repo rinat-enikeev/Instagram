@@ -32,10 +32,13 @@ PODS:
     - TransitionKit (~> 2.2)
   - RKValueTransformers (1.1.2)
   - SOCKit (1.1)
-  - STXInstagramFeedView (0.1.8):
+  - STXInstagramFeedView (0.1.9):
+    - HexColors
     - InstaModel
     - MHPrettyDate
     - PureLayout
+    - Reachability
+    - TSMessages
     - TTTAttributedLabel
     - UALogger
   - TransitionKit (2.2.1)
@@ -76,7 +79,7 @@ SPEC CHECKSUMS:
   RestKit: 112fba5bd1f97598aac0db7981863d5fdc0263a2
   RKValueTransformers: 66ac5e4f077fdbe3496e792d89eeff4c3eb67701
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
-  STXInstagramFeedView: a58dca7a03a79b2f54a65d61809857058ac7541d
+  STXInstagramFeedView: 7bee3b3a992112a0a1b2a3b331616c4c6afbd755
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
   TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
