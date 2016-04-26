@@ -60,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSObject<InstaPost>* postItem = self.posts[section];
-    NSInteger commentsCount = MIN(MAX_NUMBER_OF_COMMENTS, [[postItem commentsCount] integerValue]);
+    NSInteger commentsCount = MIN(MAX_NUMBER_OF_COMMENTS, [[postItem comments] count]);
     return NUMBER_OF_STATIC_ROWS + commentsCount;
 }
 
@@ -133,7 +133,7 @@
     NSObject<InstaPost>* post = self.posts[indexPath.section];
     STXCommentCell *cell;
     
-    NSInteger postCommentsCount = [[post commentsCount] integerValue];
+    NSInteger postCommentsCount = [[post comments] count];
     if (indexPath.row == 0 && postCommentsCount > MAX_NUMBER_OF_COMMENTS) {
 
         static NSString *AllCommentsCellIdentifier = @"STXAllCommentsCell";
@@ -141,10 +141,10 @@
     
         if (cell == nil) {
             cell = [[STXCommentCell alloc] initWithStyle:STXCommentCellStyleShowAllComments
-                                           totalComments:postCommentsCount
+                                           totalComments:[[post commentsCount] integerValue]
                                          reuseIdentifier:AllCommentsCellIdentifier];
         } else {
-            cell.totalComments = postCommentsCount;
+            cell.totalComments = [[post commentsCount] integerValue];
         }
         
     } else {
@@ -153,10 +153,6 @@
         
         NSOrderedSet<NSObject<InstaComment> *> *comments = [post comments];
         
-        // checkme & fixme - undefined behavior (empty cells?)
-        // if commentsCount >> 0 and there is no data in instagram json.
-        // Is it guaranteed that comments always present (should be so)?
-        // In NEW (after 11/17/15 API there are no comments in deep json!)
         NSObject<InstaComment>* comment = comments[indexPath.row];
         
         if (indexPath.row < [comments count]) {
@@ -190,7 +186,7 @@
     NSInteger captionRowOffset = 3;
     
     NSObject<InstaPost>* postItem = self.posts[indexPath.section];
-    NSInteger commentsCount = MIN(MAX_NUMBER_OF_COMMENTS, [[postItem commentsCount] integerValue]);
+    NSInteger commentsCount = MIN(MAX_NUMBER_OF_COMMENTS, [[postItem comments] count]);
     NSInteger commentsRowLimit = captionRowOffset + commentsCount;
     
     if (indexPath.row == PHOTO_CELL_ROW) {
